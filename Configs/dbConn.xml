@@ -1,0 +1,7 @@
+<conn>
+    <host>mysql.techniekontwikkelt.nl</host>
+    <databaseName>techniekontwikke</databaseName>
+    <charset>utf8</charset>
+    <username>techniekontwikke</username>
+    <password>pPZd8qZd35BWJW</password>
+</conn>
