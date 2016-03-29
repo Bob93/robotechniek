@@ -1,0 +1,23 @@
+root
+	configs
+	Engine
+	Fonts
+	Images
+	Pages
+		CMS
+			ChangeContents
+			ChangeEvents
+			ChangeFiles
+			ChangeFooter
+			ChangeHeader
+			ChangeMembers
+			ChangeMenus
+			ChangePages
+			Home
+	Scripts
+		bootstrap
+		CMS
+	Styles
+		CMS
+	Uploads
+		Members

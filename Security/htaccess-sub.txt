@@ -1,0 +1,11 @@
+#put file in any directory where access by outsiders should NOT be allowed
+order deny,allow
+deny from all
+
+<FilesMatch "\.(php|pl|py|jsp|asp|htm|shtml|sh|cgi.+)$">
+    ForceType text/plain
+</FilesMatch>
+
+<Files *.php>
+Deny from All
+</Files>

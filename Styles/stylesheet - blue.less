@@ -1,0 +1,39 @@
+@color: rgba(40,55,255,0.8);
+/*@color: rgba(255,55,40,0.8);*/
+@color1: rgba(255,55,40,1);
+/* painting */
+.s-content {
+	background-color: @color; 
+	background-image: 	radial-gradient(circle at 0 0, @color 14px, rgba(204, 0, 0, 0) 15px), 
+						radial-gradient(circle at 100% 0, @color 14px, rgba(204, 0, 0, 0) 15px), 
+						radial-gradient(circle at 100% 100%, @color 14px, rgba(204, 0, 0, 0) 15px), 
+						radial-gradient(circle at 0 100%, @color 14px, rgba(204, 0, 0, 0) 15px), url("../images/chill.jpg");
+}
+.s-title h1 {
+	color: @color;
+}
+.s-ruler h1 {
+  color: @color;
+}
+/* side bar and portret */
+#portret{
+    border-color: @color;
+}
+#portretinfo {
+	background-color: @color;
+}
+/* login form in footer */
+.is-form {
+	color: @color;
+}
+.is-form-button {
+	background: @color;
+}
+/* footer */
+.p-footer {
+	background: @color;
+}
+/* content block */
+.content {
+	background: @color;
+}

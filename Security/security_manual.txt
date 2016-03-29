@@ -1,0 +1,47 @@
+This is a simple guide for using the security class.
+
+General usage: $SEC = new Security(); (make the object)
+			   $SEC->Secure("type", "data", "parameters", "exceptions"); (call the general functions with parameters).
+			   
+			   type = the type of attack the function protects against, like xss etc but check the list for more information!
+			   data = data you want to clean up.
+			   parameters = to neutrilize some attacks we need to give parameters for the function to correctly do it's job.
+			   exceptions = for case there needs to be added even more data (xss whitelist where you provide a string of characters
+			   that may NOT be removed for example).
+			   
+
+In general if you want to use the class you have to do the next things:
+	1. Somehow include the security class.
+	2. Make a new security object.
+		(example: $SEC = new Security();)
+
+	3. Call the general function with parameters (described below):
+		$clean = $SEC->Secure(-parameters-);
+		
+		
+Functions:
+
+	1. Every time a page with a form is loaded, a function needs to be executed in order to verify that a unique token is generated:
+		$SEC->Secure("csrfgenerate", "", "", "");
+		A second function inserts the unique token into the form:
+		$SEC->Secure("csrfform", "", "", "");
+		A third function validates if the token from the request (post/get) equals the token in the session variable:
+		$SEC->Secure("csrfcheck", $_POST['token'], "", "");
+		
+		So the function for anything that has to do with client side forms/request validation:
+		$SEC->Secure("csrfgenerate", "", "", "");
+		$SEC->Secure("csrfform", "", "", "");
+		$SEC->Secure("csrfcheck", $_POST/$_GET['token'], "", "");
+	
+	
+	2. For every data item that is going to be inserted into the database (yes EVERY DATA ITEM FROM ANY FORM) there has to be a
+	check to make sure that no XSS (aka javascript mostly) code gets inserted into the database. The parameterized queries work
+	against sql injection but not against XSS attacks! (XSS = Cross Site Scripting).
+	
+		- Normal string: $clean = $SEC->Secure("xss", $title, "string", "");
+		- Number: $clean = $SEC->Secure("xss", $id, "num", "");
+		- Whitelist: $clean = $SEC->Secure("xss", $title, "string", "$%*()");
+		- Email: $clean = $SEC->Secure("xss", $email, "email", "");
+		
+		
+	3. In every sub directory that may not be browsed by foreigners, the sub htaccess file needs to be uploaded there.

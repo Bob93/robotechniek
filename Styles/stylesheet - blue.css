@@ -1,0 +1,61 @@
+/* navbar */
+/* navbar */
+.navbar-default {
+  background: #c00;
+  background: linear-gradient(135deg, transparent 10px, #cc0000 0) top left, linear-gradient(225deg, transparent 10px, #cc0000 0) top right, linear-gradient(315deg, transparent 10px, #cc0000 0) bottom right, linear-gradient(45deg, transparent 10px, #cc0000 0) bottom left;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  background-position-x: 0%, 99.9%, 99.9%, 0%;
+  background-position-y: 0%, 0%, 100%, 100%;
+  padding: 5px;
+  background-image: radial-gradient(circle at 0 0, rgba(255, 0, 0, 0) 14px, rgba(40, 55, 255, 0.8) 15px), radial-gradient(circle at 100% 0, rgba(255, 0, 0, 0) 14px, rgba(40, 55, 255, 0.8) 15px), radial-gradient(circle at 100% 100%, rgba(255, 0, 0, 0) 14px, rgba(40, 55, 255, 0.8) 15px), radial-gradient(circle at 0 100%, rgba(255, 0, 0, 0) 14px, rgba(40, 55, 255, 0.8) 15px);
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+/* painting */
+.s-content {
+  background-color: rgba(40, 55, 255, 0.8);
+  background-image: radial-gradient(circle at 0 0, rgba(40, 55, 255, 0.8) 14px, rgba(204, 0, 0, 0) 15px), radial-gradient(circle at 100% 0, rgba(40, 55, 255, 0.8) 14px, rgba(204, 0, 0, 0) 15px), radial-gradient(circle at 100% 100%, rgba(40, 55, 255, 0.8) 14px, rgba(204, 0, 0, 0) 15px), radial-gradient(circle at 0 100%, rgba(40, 55, 255, 0.8) 14px, rgba(204, 0, 0, 0) 15px), url("../Images/tools.jpg");
+}
+.s-title h1 {
+  color: rgba(40, 55, 255, 0.8);
+}
+.s-ruler h1 {
+  color: rgba(40, 55, 255, 0.8);
+}
+/* side bar and portret */
+#portret {
+  border-color: rgba(40, 55, 255, 0.8);
+}
+#portretinfo {
+  background-color: rgba(40, 55, 255, 0.8);
+}
+/* login form in footer */
+.is-form {
+  color: rgba(40, 55, 255, 0.8);
+}
+.is-form-button {
+  background: rgba(40, 55, 255, 0.8);
+}
+/* footer */
+.p-footer {
+  background: rgba(40, 55, 255, 0.8);
+}
+/* content block */
+.content {
+  background: rgba(40, 55, 255, 0.8);
+}
+.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: rgba(40, 55, 255, 0.8);
+}
+.c-container {
+  background-image: url("../Images/schilderijHangerBlauw.png");
+}
+.painting {
+  background-image: url("../Images/schilderijHangerBlauw.png");
+}
+@media only screen and (max-width: 991px) {
+  #portretbar {
+    display: none;
+  }
+}
